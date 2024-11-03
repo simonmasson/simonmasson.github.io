@@ -1,0 +1,18 @@
+body {
+    font-family:'Courier New', Courier, monospace;
+    background:black;
+    color:white;
+    font-size:1.2em;
+    text-align:center;
+}
+#page {
+    text-align:left;
+    width:800px;
+    display:inline-block;
+}
+a {
+    color:white;
+}
+ul {
+    list-style-type:circle;
+}
