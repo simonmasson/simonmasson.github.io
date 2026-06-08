@@ -13,7 +13,7 @@
         <h1>Simon Masson</h1>
 
         I am a cryptography engineer working at <a href="https://zknox.eth.limo">ZKNox</a>.<br><br>
-        I am currently working on zero-knowledge proofs and post-quantum signature integration in Ethereum.<br><br>
+        I am currently working on privacy-preserving and post-quantum primitives for Ethereum.<br><br>
         <a href="cv.pdf">cv</a>, <a href="mailto:simon.masson@protonmail.com">mail</a><br><br>
 
         <!-- Welcome to my webpage!<br>
@@ -64,12 +64,49 @@ Feel free to contact me by <a href="mailto:simon.masson@protonmail.com">mail</a>
 
         <br>
 
-        <span style="color:green">root@maison</span>:<span style="color:cornflowerblue">/#</span>
-        <div
-            style="display:inline-block;width: 0.6em;height: 1em;background-color: white;animation: blink 1s infinite;">
-            _
+        <!-- <span style="color:green">root@maison</span>:<span style="color:cornflowerblue">/#</span>
+        ls -t publications/
+        <br>
+        [EHMP25]_(LatinCrypt)_Fast_EC_scalar_mul_in_SN(T)ARKs<br>
+        [MSZ24]__(DCC)________Bandersnatch<br>
+        [M21]____(HAL)________PhD_thesis<br>
+        [GMT20]__(DCC)________Cocks-Pinch_curves_with_5≤k≤8<br>
+        [FSM19]__(AsiaCrypt)__VDF_from_isogenies_and_pairings<br>
+        [BDM18]__(eprint)_____4QtEd,_an_efficient_EC_with_high_security<br>
+        <br>
+ -->
+
+        <div id="terminal-history"></div>
+        <div id="terminal-prompt">
+            <span style="color:green">root@maison</span>:<span style="color:cornflowerblue">/#</span>
+            <input id="terminal-input" type="text" autofocus autocomplete="off" spellcheck="false">
         </div>
+
     </div>
+
+    <script>
+        const input = document.getElementById('terminal-input');
+        const history = document.getElementById('terminal-history');
+        const promptHTML = '<span style="color:green">root@maison</span>:<span style="color:cornflowerblue">/#</span>';
+
+        function escapeHtml(s) {
+            const div = document.createElement('div');
+            div.textContent = s;
+            return div.innerHTML;
+        }
+
+        input.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                const line = document.createElement('div');
+                line.innerHTML = promptHTML + ' ' + escapeHtml(input.value);
+                history.appendChild(line);
+                input.value = '';
+            }
+        });
+
+        document.addEventListener('click', () => input.focus());
+    </script>
 
 </body>
 

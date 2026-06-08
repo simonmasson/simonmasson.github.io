@@ -20,6 +20,18 @@ ul {
     list-style-type: circle;
 }
 
+#terminal-input {
+    background: transparent;
+    border: none;
+    color: white;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    width: 70%;
+    caret-color: white;
+    padding: 0;
+}
+
 @keyframes blink {
     0% {
         opacity: 1;
