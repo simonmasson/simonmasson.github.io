@@ -13,7 +13,16 @@ body {
 #page {
     text-align: left;
     width: 800px;
+    max-width: calc(100% - 2em);
     display: inline-block;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 1em;
+    }
 }
 
 a {
