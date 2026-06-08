@@ -1,3 +1,7 @@
+html {
+    color-scheme: dark;
+}
+
 body {
     font-family: 'Courier New', Courier, monospace;
     background: black;
@@ -20,25 +24,32 @@ ul {
     list-style-type: circle;
 }
 
-#terminal-input {
-    background: transparent;
-    border: none;
-    color: white;
+#terminal-input,
+#terminal-input:focus,
+#terminal-input:hover,
+#terminal-input:active {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+    color: white !important;
     font-family: inherit;
     font-size: inherit;
-    outline: none;
+    outline: none !important;
     width: 70%;
     caret-color: white;
     padding: 0;
     margin: 0;
-    box-shadow: none;
+    box-shadow: none !important;
     -moz-appearance: none;
     appearance: none;
+    border-radius: 0 !important;
 }
 
-#terminal-input:focus {
-    outline: none;
-    box-shadow: none;
+#terminal-input:-moz-ui-invalid,
+#terminal-input:invalid {
+    box-shadow: none !important;
+    border: none !important;
 }
 
 @keyframes blink {
